@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Pessoa } from 'src/app/app/pessoas/pessoa';
+import { Pessoa } from 'src/app/pessoas/pessoa';
 
 @Component({
   selector: 'app-pessoasdetails',
