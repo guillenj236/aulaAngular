@@ -11,16 +11,16 @@
                 <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
 
                 <div class="form-outline form-white mb-4">
-                  <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                  <label class="form-label" for="typeEmailX">Email</label>
+                  <input type="text" id="typeEmailX" class="form-control form-control-lg" [(ngModel)]="usuario.login" />
+                  <label class="form-label" for="typeEmailX">Login</label>
                 </div>
   
                 <div class="form-outline form-white mb-4">
-                  <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                  <input type="password" id="typePasswordX" class="form-control form-control-lg" [(ngModel)]="usuario.senha"/>
                   <label class="form-label" for="typePasswordX">Password</label>
                 </div>
   
-                <a class="btn btn-outline-light btn-lg px-5" type="submit" href="/menu">Login</a>
+                <a class="btn btn-outline-light btn-lg px-5" type="submit" (click)="logar()">Logar</a>
 
               </div>
             </div>

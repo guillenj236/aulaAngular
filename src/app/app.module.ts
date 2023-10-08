@@ -14,7 +14,7 @@ import { CarrosdetailsComponent } from './carros/carrosdetails/carrosdetails.com
 import { LivroslistComponent } from './livros/livroslist/livroslist.component';
 import { LivrosdetailsComponent } from './livros/livrosdetails/livrosdetails.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MenuComponent } from './menu/menu.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,10 +29,10 @@ import { MenuComponent } from './menu/menu.component';
     CarrosdetailsComponent,
     LivroslistComponent,
     LivrosdetailsComponent,
-    MenuComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NgbModule
   ],

@@ -1,12 +1,28 @@
 <table>
+    <thead>
+        <tr>
+            <th>Nome:</th>
+            <th>Ano:</th>
+            <th><input type="button" (click)="abreModal(componentModal)" value="Novo"></th>
+        </tr>
+    </thead>
     <tbody>
-    <tr>
-        <th>Nome:</th>
-        <th>Ano:</th>
-    </tr>
-    <tr  *ngFor="let carro of lista">
-        <td>{{carro.nome}}</td>
-        <td>{{carro.ano}}</td>
-    </tr>
-</tbody>
+        <tr  *ngFor="let carro of lista">
+            <td>{{carro.nome}}</td>
+            <td>{{carro.ano}}</td>
+            <td><input type="button"value="Editar"></td>
+        </tr>
+
+    </tbody>
 </table>
+<ng-template #componentModal let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Adicionar novo Carro</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+        <app-carrosdetails (retorno)="addNaLista($event)" ></app-carrosdetails>  
+	</div>
+	<div class="modal-footer">
+	</div>
+</ng-template>

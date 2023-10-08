@@ -6,12 +6,10 @@ import { PessoaslistComponent } from './pessoas/pessoaslist/pessoaslist.componen
 import { PessoasdetailsComponent } from './pessoas/pessoasdetails/pessoasdetails.component';
 import { LivroslistComponent } from './livros/livroslist/livroslist.component';
 import { CarroslistComponent } from './carros/carroslist/carroslist.component';
-import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"login", pathMatch: 'full'},
   {path: "login", component: LoginComponent},
-  {path:"menu", component: MenuComponent},
   {path: "admin", component: IndexComponent, children: [
     {path:"pessoas", component: PessoaslistComponent},
     {path: "carros", component: CarroslistComponent},

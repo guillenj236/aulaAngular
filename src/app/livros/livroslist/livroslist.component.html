@@ -1,12 +1,28 @@
 <table>
+    <thead>
+        <tr>
+            <th>Autor:</th>
+            <th>Título:</th>
+            <th><input type="button" (click)="abreModal(componentModal)" value="Novo"></th>
+        </tr>
+    </thead>
     <tbody>
-    <tr>
-        <th>Autor:</th>
-        <th>Titulo:</th>
-    </tr>
-    <tr  *ngFor="let livro of lista">
-        <td>{{livro.autor}}</td>
-        <td>{{livro.titulo}}</td>
-    </tr>
-</tbody>
+        <tr  *ngFor="let livro of lista">
+            <td>{{livro.autor}}</td>
+            <td>{{livro.titulo}}</td>
+            <td><input type="button"value="Editar"></td>
+        </tr>
+
+    </tbody>
 </table>
+<ng-template #componentModal let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Adicionar novo Livro</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+        <app-livrosdetails (retorno)="addNaLista($event)" ></app-livrosdetails>  
+	</div>
+	<div class="modal-footer">
+	</div>
+</ng-template>
